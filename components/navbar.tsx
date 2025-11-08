@@ -1,6 +1,6 @@
 "use client";
 
-import bobbinLogo from "@/assets/bobbin-logo.png";
+import bobbinApparelsLogo from "@/assets/bobbin-apparels-logo.png";
 import { CartDrawer } from "@/components/cart-drawer";
 import {
   Accordion,
@@ -58,7 +58,12 @@ export function Navbar() {
     <nav className="sticky top-0 z-50 w-full border-b backdrop-blur">
       <div className="container mx-auto flex h-16 items-center justify-between px-4">
         <Link href="/" className="text-2xl font-bold tracking-tight">
-          <Image src={bobbinLogo} alt="Bobbin Logo" width={100} height={30} />
+          <Image
+            src={bobbinApparelsLogo}
+            alt="Bobbin Logo"
+            width={72}
+            height={12}
+          />
         </Link>
 
         <NavigationMenu className="hidden md:flex">
@@ -136,7 +141,7 @@ export function Navbar() {
                 <SheetTitle>
                   <Link href="/" onClick={() => setMobileMenuOpen(false)}>
                     <Image
-                      src={bobbinLogo}
+                      src={bobbinApparelsLogo}
                       alt="Bobbin Logo"
                       width={100}
                       height={30}
