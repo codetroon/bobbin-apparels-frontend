@@ -7,7 +7,10 @@ export function Footer() {
       <div className="container mx-auto px-4 py-12">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           <div>
-            <h3 className="mb-4 text-lg font-bold text-bobbinText">bobbin</h3>
+            <h3 className="mb-4 text-lg font-bold text-bobbinText">
+              bobbinapparels a concern of{" "}
+              <Link href="https://bobbin.com.bd">bobbin</Link> group
+            </h3>
             <p className="text-sm text-black">
               Premium fashion essentials for the modern gentleman.
             </p>

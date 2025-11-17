@@ -5,24 +5,37 @@ export default function AboutPage() {
   return (
     <div className="container mx-auto px-4 py-16">
       <div className="mx-auto max-w-4xl">
-        <h1 className="mb-8 text-4xl font-bold">About bobbin</h1>
+        <h1 className="mb-8 text-4xl font-bold">About Bobbin Apparels</h1>
 
         <div className="space-y-6 text-muted-foreground">
           <p className="text-lg leading-relaxed">
-            Welcome to Bobbin — your trusted destination for premium men&apos;s
-            fashion in Bangladesh. We believe clothing is more than just fabric
-            — it&apos;s confidence, comfort, and craftsmanship combined. Since
-            2019, Bobbin has been creating a complete range of menswear designed
-            for modern lifestyles — from Polos and T-Shirts to Shirts, Hoodies,
-            Jackets, Denims, Twill Pants, Punjabis, and Trousers. Every product
-            is carefully developed in our own production setup — from cutting to
-            stitching — ensuring long-lasting quality and comfort you can feel.
-            Our fabric selection includes a variety of cotton, pique, twill,
-            denim, fleece, and blended materials, crafted to suit
-            Bangladesh&apos;s weather and everyday wear. Whether it&apos;s a
-            weekend casual look, an office day, or a festive occasion, Bobbin
-            brings you versatile essentials for every moment.
+            At Bobbin Apparels, we believe clothing is more than style — it is
+            comfort, confidence, and consistency. Since 2019, we have been
+            committed to producing high-quality apparel that brands and
+            individuals can trust. With a dedicated production setup and a
+            skilled team, we ensure every piece is made with discipline,
+            precision, and care.
           </p>
+
+          <div>
+            <h1 className="mb-8 text-4xl font-bold text-black">Who We Are</h1>
+            <p className="text-lg leading-relaxed">
+              Bobbin Apparels is the manufacturing and wholesale wing of the
+              Bobbin brand. From fabric sourcing to cutting, sewing, finishing,
+              printing, and packaging — we maintain a smooth and
+              quality-controlled production line designed to serve both local
+              and global clients.
+            </p>
+          </div>
+
+          <div>
+            <h1 className="mb-8 text-4xl font-bold text-black">What we do</h1>
+            <p className="text-lg leading-relaxed">
+              Bulk Manufacturing Custom Orders for Brands High-Quality Polo &
+              T-Shirts Export-Grade Finishing Reliable & Consistent Production
+              Fast Delivery and Clear Communication
+            </p>
+          </div>
 
           <h2 className="pt-6 text-2xl font-semibold text-foreground">
             Our Commitment
@@ -30,29 +43,42 @@ export default function AboutPage() {
 
           <ul className="space-y-3 pl-6">
             <li className="list-disc">
-              <strong className="text-foreground">Premium Quality:</strong> We
-              choose only the finest fabrics and trims for unmatched comfort and
-              durability.
-            </li>
-            <li className="list-disc">
-              <strong className="text-foreground">Craftsmanship:</strong> Every
-              piece is made by skilled hands in our own line under strict
-              quality control.
-            </li>
-            <li className="list-disc">
-              <strong className="text-foreground">Modern Versatility:</strong>{" "}
-              From classic polos to denim jackets, our designs balance function
-              with fashion.
-            </li>
-            <li className="list-disc">
-              <strong className="text-foreground">Customer Focus:</strong> We
-              listen, adapt, and continuously refine — because your satisfaction
-              defines our success.
+              We don&apos;t believe in shortcuts. Every order, whether small or
+              large, receives the same level of attention and responsibility.
+              Our goal is simple: deliver products that meet standards, fit
+              well, feel good, and last long.
             </li>
           </ul>
 
           <h2 className="pt-6 text-2xl font-semibold text-foreground">
-            Why Choose bobbin?
+            Our Values
+          </h2>
+
+          <ul className="space-y-3 pl-6">
+            <li className="list-disc">
+              Trust – We deliver what we promise. Quality – Fabric selection,
+              stitching, and finishing with strict QC. Consistency – Stable
+              production, reliable timelines, and repeatable results.
+              Responsibility – Ethical practices and a customer-first mindset.
+            </li>
+          </ul>
+
+          <h2 className="pt-6 text-2xl font-semibold text-foreground">
+            Looking Ahead
+          </h2>
+
+          <ul className="space-y-3 pl-6">
+            <li className="list-disc">
+              Bobbin Apparels is expanding with a broader vision under Bobbin
+              Group — focusing on manufacturing excellence, retail growth, and
+              international market opportunities. We aim to build long-term
+              partnerships and become a dependable manufacturing hub for brands
+              across Bangladesh and beyond.
+            </li>
+          </ul>
+
+          <h2 className="pt-6 text-2xl font-semibold text-foreground">
+            Why Choose bobbin apparels?
           </h2>
 
           <p className="leading-relaxed">

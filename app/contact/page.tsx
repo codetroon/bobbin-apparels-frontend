@@ -87,7 +87,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="mb-1 font-semibold">Whatsapp</h3>
                   <Link
-                    href="https://wa.me/+8801805426663"
+                    href="https://wa.me/+8801805426664"
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
                     Chat with us
@@ -106,7 +106,7 @@ export default function ContactPage() {
                     href="mailto:support@bobbin.com.bd"
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    bobbinctg@gmail.com
+                    bobbinapparels@gmail.com{" "}
                   </Link>
                 </div>
               </CardContent>
@@ -120,10 +120,10 @@ export default function ContactPage() {
                 <div>
                   <h3 className="mb-1 font-semibold">Hotline</h3>
                   <Link
-                    href="tel:09647469626"
+                    href="tel:+8809647469636"
                     className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                   >
-                    09647469626
+                    +880 9647-469636
                   </Link>
                 </div>
               </CardContent>
@@ -137,9 +137,7 @@ export default function ContactPage() {
                 <div>
                   <h3 className="mb-1 font-semibold">Location</h3>
                   <p className="text-sm text-muted-foreground">
-                    Corporate Office & Showroom 13/52,Bipani
-                    bitan,B-block,Level-2,New Market,Kotowali-4000, Chattogram,
-                    Bangladesh
+                    5,6, Shadharghat road, Alkoron, Chittagong, Bangladesh, 4000
                   </p>
                 </div>
               </CardContent>
