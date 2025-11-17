@@ -20,6 +20,9 @@ export function CartDrawer({ children }: { children: React.ReactNode }) {
   const total = useCartStore((state) => state.getTotal());
   const updateQuantity = useCartStore((state) => state.updateQuantity);
   const removeItem = useCartStore((state) => state.removeItem);
+  const totalQuantity = items.reduce((sum, it) => sum + (it.quantity || 0), 0);
+  const MIN_QUANTITY_TO_CHECKOUT = 20;
+  const canCheckout = totalQuantity >= MIN_QUANTITY_TO_CHECKOUT;
 
   return (
     <Sheet open={open} onOpenChange={setOpen}>
@@ -128,11 +131,26 @@ export function CartDrawer({ children }: { children: React.ReactNode }) {
                 <span>{total}</span>
               </div>
 
-              <Link href="/checkout" onClick={() => setOpen(false)}>
-                <Button className="w-full" size="lg">
+              {!canCheckout && (
+                <p className="text-sm text-muted-foreground">
+                  Minimum order quantity is {MIN_QUANTITY_TO_CHECKOUT} items.
+                  Add {MIN_QUANTITY_TO_CHECKOUT - totalQuantity} more item
+                  {MIN_QUANTITY_TO_CHECKOUT - totalQuantity > 1 ? "s" : ""} to
+                  enable checkout.
+                </p>
+              )}
+
+              {canCheckout ? (
+                <Link href="/checkout" onClick={() => setOpen(false)}>
+                  <Button className="w-full" size="lg">
+                    Checkout
+                  </Button>
+                </Link>
+              ) : (
+                <Button className="w-full" size="lg" disabled aria-disabled>
                   Checkout
                 </Button>
-              </Link>
+              )}
             </div>
           )}
         </div>

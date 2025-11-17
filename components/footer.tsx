@@ -103,7 +103,7 @@ export function Footer() {
 
         <div className="mt-8 border-t pt-8 text-center text-sm text-black">
           <p>
-            &copy; {new Date().getFullYear()} bobbin.com.bd, All rights
+            &copy; {new Date().getFullYear()} bobbinapparels.com, All rights
             reserved.
           </p>
         </div>
