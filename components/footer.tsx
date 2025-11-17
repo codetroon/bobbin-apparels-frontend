@@ -11,6 +11,9 @@ export function Footer() {
               bobbinapparels a concern of{" "}
               <Link href="https://bobbin.com.bd">bobbin</Link> group
             </h3>
+            <p className="my-2 hover:underline hover:text-blue-600">
+              <Link href="https://bobbin.com.bd">www.bobbin.com.bd</Link>
+            </p>
             <p className="text-sm text-black">
               Premium fashion essentials for the modern gentleman.
             </p>
