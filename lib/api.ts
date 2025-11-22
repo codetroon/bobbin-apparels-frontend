@@ -213,9 +213,18 @@ class ApiClient {
   }
 
   // Size endpoints
-  async getSizes(productId?: string) {
-    const params = productId ? `?productId=${productId}` : "";
-    return this.request(`/sizes${params}`);
+  async getSizes(params?: {
+    page?: number;
+    limit?: number;
+    productId?: string;
+  }) {
+    const searchParams = new URLSearchParams();
+    if (params?.page) searchParams.set("page", params.page.toString());
+    if (params?.limit) searchParams.set("limit", params.limit.toString());
+    if (params?.productId) searchParams.set("productId", params.productId);
+
+    const query = searchParams.toString();
+    return this.request(`/sizes${query ? `?${query}` : ""}`);
   }
 
   async createSize(sizeData: {
@@ -329,7 +338,7 @@ class ApiClient {
     email: string;
     message: string;
   }) {
-    return this.publicRequest("/contact-messages", {
+    return this.publicRequest("/contact-messages/add", {
       method: "POST",
       body: JSON.stringify(contactData),
     });
