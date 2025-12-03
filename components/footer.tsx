@@ -87,7 +87,7 @@ export function Footer() {
             </h4>
             <div className="flex space-x-4">
               <Link
-                href="https://www.facebook.com/share/16M3qoXigc"
+                href="https://www.facebook.com/share/1E1NW8Xo5r/"
                 className="text-black hover:text-foreground transition-colors"
               >
                 <Facebook className="h-5 w-5" />

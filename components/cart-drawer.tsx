@@ -24,6 +24,11 @@ export function CartDrawer({ children }: { children: React.ReactNode }) {
   const MIN_QUANTITY_TO_CHECKOUT = 20;
   const canCheckout = totalQuantity >= MIN_QUANTITY_TO_CHECKOUT;
 
+  const handleQuantityChange = (item: any, newQuantity: number) => {
+    if (newQuantity < 1) return; // Prevent negative quantities
+    updateQuantity(item.productId, item.size, newQuantity);
+  };
+
   return (
     <Sheet open={open} onOpenChange={setOpen}>
       <SheetTrigger asChild>{children}</SheetTrigger>
@@ -86,28 +91,29 @@ export function CartDrawer({ children }: { children: React.ReactNode }) {
                             size="icon"
                             className="h-8 w-8"
                             onClick={() =>
-                              updateQuantity(
-                                item.productId,
-                                item.size,
-                                item.quantity - 1
-                              )
+                              handleQuantityChange(item, item.quantity - 1)
                             }
                           >
                             <Minus className="h-3 w-3" />
                           </Button>
-                          <span className="w-8 text-center text-sm">
-                            {item.quantity}
-                          </span>
+                          {/* Editable Quantity Field */}
+                          <input
+                            type="number"
+                            value={item.quantity}
+                            onChange={(e) =>
+                              handleQuantityChange(
+                                item,
+                                Math.max(1, Number(e.target.value))
+                              )
+                            }
+                            className="w-12 text-center text-sm border rounded-md"
+                          />
                           <Button
                             variant="outline"
                             size="icon"
                             className="h-8 w-8"
                             onClick={() =>
-                              updateQuantity(
-                                item.productId,
-                                item.size,
-                                item.quantity + 1
-                              )
+                              handleQuantityChange(item, item.quantity + 1)
                             }
                           >
                             <Plus className="h-3 w-3" />

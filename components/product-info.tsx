@@ -6,9 +6,9 @@ import { apiClient } from "@/lib/api";
 import { useCartStore } from "@/lib/store";
 import type { Product } from "@/lib/types";
 import { Ruler } from "lucide-react";
+import Link from "next/link";
 import { useEffect, useState } from "react";
-import { FaFacebook, FaFacebookMessenger, FaWhatsapp } from "react-icons/fa";
-import { FaXTwitter } from "react-icons/fa6";
+import { FaFacebook, FaWhatsapp } from "react-icons/fa";
 import { toast } from "sonner";
 
 type ProductInfoProps = {
@@ -73,38 +73,6 @@ export function ProductInfo({ product }: ProductInfoProps) {
     });
 
     toast.success("Added to bag");
-  };
-
-  const handleShare = (platform: string) => {
-    const url = window.location.href;
-    const text = `Check out ${product.name} on Bobbin`;
-
-    switch (platform) {
-      case "facebook":
-        window.open(
-          `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
-          "_blank"
-        );
-        break;
-      case "messenger":
-        window.open(
-          `https://www.facebook.com/dialog/send?link=${encodeURIComponent(url)}&app_id=YOUR_APP_ID&redirect_uri=${encodeURIComponent(url)}`,
-          "_blank"
-        );
-        break;
-      case "whatsapp":
-        window.open(
-          `https://wa.me/?text=${encodeURIComponent(text + " " + url)}`,
-          "_blank"
-        );
-        break;
-      case "twitter":
-        window.open(
-          `https://twitter.com/intent/tweet?text=${encodeURIComponent(text)}&url=${encodeURIComponent(url)}`,
-          "_blank"
-        );
-        break;
-    }
   };
 
   return (
@@ -216,34 +184,22 @@ export function ProductInfo({ product }: ProductInfoProps) {
       )}
 
       <div className="flex items-center justify-center gap-4 pt-4 border-t">
-        <button
-          onClick={() => handleShare("facebook")}
-          className="text-muted-foreground hover:text-foreground transition-colors"
-          aria-label="Share on Facebook"
-        >
-          <FaFacebook size={24} />
-        </button>
-        <button
-          onClick={() => handleShare("messenger")}
-          className="text-muted-foreground hover:text-foreground transition-colors"
-          aria-label="Share on Messenger"
-        >
-          <FaFacebookMessenger size={24} />
-        </button>
-        <button
-          onClick={() => handleShare("whatsapp")}
-          className="text-muted-foreground hover:text-foreground transition-colors"
-          aria-label="Share on WhatsApp"
-        >
-          <FaWhatsapp size={24} />
-        </button>
-        <button
-          onClick={() => handleShare("twitter")}
-          className="text-muted-foreground hover:text-foreground transition-colors"
-          aria-label="Share on Twitter"
-        >
-          <FaXTwitter size={24} />
-        </button>
+        <Link href="https://www.facebook.com/share/1E1NW8Xo5r/">
+          <button
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Share on Facebook"
+          >
+            <FaFacebook size={24} />
+          </button>
+        </Link>
+        <Link href="https://wa.me/+8801805426664">
+          <button
+            className="text-muted-foreground hover:text-foreground transition-colors"
+            aria-label="Share on WhatsApp"
+          >
+            <FaWhatsapp size={24} />
+          </button>
+        </Link>
       </div>
 
       {/* Size Guide Dialog */}
